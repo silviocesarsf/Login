@@ -1,0 +1,437 @@
+/* Configurações do Site */
+
+@import url(reset.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(177, 177, 177);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(63, 63, 63);
+    border-radius:200px;
+    border: none;
+}
+
+/* Cabeçalho */
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: black;
+    transition: 0.5s ease-in-out;
+    box-shadow: black 1px 1px 5px 5px;
+}
+
+.logo {
+    text-transform: lowercase;
+    font-size: 12px;
+    color: white;
+}
+
+.logo span {
+    color: rgb(40, 202, 80);
+}
+
+.menu li,a {
+    transition: 0.4s ease-in-out;
+    display: inline-block;
+    color: white;
+    margin: 0 .5rem;
+}
+
+.menu a:hover {
+    color: rgb(40, 202, 80) ;
+}
+
+.searchbox input {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent ;
+    border: 0.5px solid white;
+    transition: 0.5s ease-in-out;
+}
+
+.searchbox input::placeholder {
+    color: rgb(247, 247, 247);
+}
+
+.searchbox input:focus {
+    transform: scale(105%);
+    background: rgba(73, 73, 73, 0.342);
+}
+
+.menu-link_login a{
+    color:rgb(40, 202, 80) ;
+}
+
+/* Seção Principal */
+
+main {
+    background: linear-gradient(65deg, rgb(0, 0, 0), rgb(34, 34, 34));
+    height: 100vh;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(65deg, rgb(20, 20, 20), rgb(53, 53, 53));
+    height: 400px;
+    width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid rgb(95, 230, 124);
+    border-bottom: 4px solid rgb(95, 230, 124);
+    box-shadow: 1px 3px 12px 0px black;
+    transition: 0.4s ease-in-out;
+}
+
+.left h1 {
+    position: relative;
+    right: 4rem;
+    bottom: 1rem;    
+    color: rgb(230, 230, 230);;
+    font-size: 2.5em;
+}
+
+.left .icons a img {
+    position: relative;
+    top: 2rem;
+    right: 3rem;
+    display: flex;
+    height: 2.3em;
+    justify-content: center;
+    gap: 30px;
+    transition: 0.4s ease-in-out;
+    border-radius: 100%;
+}
+
+.icons img:hover {
+    transform: scale(140%);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,button {
+    transition: 0.5s ease-in-out;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 1px 3px 7px 0px black;
+}
+
+input {
+    background: rgba(0, 0, 0, 0.281);
+    color: white;
+    text-align: center;
+}
+
+input::placeholder {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+.inputs input:focus{
+    transform: scale(110%);
+    outline:none;
+}
+
+.btn__login {
+    font-size: .9em;
+    font-weight: 400;
+    background: linear-gradient(to left, white, rgb(153, 152, 152));
+    transition: .3s ease-in-out;
+    opacity: 0.5;
+    color: rgb(0, 0, 0);
+}
+
+.btn__login:hover {
+    transform: scale(110%);
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Rodapé */
+
+footer {
+    height: 60px;
+    background:rgb(40, 202, 80);
+}
+footer p {
+    position: relative;
+    top: 1rem;
+    text-align: center;
+}
+
+/* Responsividade */
+
+.menu-hamburguer_ {
+    opacity: 0%;
+    background-color: white;
+    height: 1px;
+    width: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.icons-resp {
+    display: none;
+}
+
+.title-resp {
+    display: none;
+    position: relative;
+    bottom: 20px;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+
+/* Interações */ 
+
+.error-login {
+    transition: 0.3s ease-in-out;
+    border: 1px solid red;
+}
+
+.sucess-login {
+    transition: 0.3s ease-in-out;
+    border: 3px solid rgb(95, 230, 124);
+}
+
+.menu-resp {
+    display: none;
+}
+
+@media screen and (max-width:738px){
+
+    header {
+        justify-content: space-around;
+        gap: 20px;
+        height: 10vh;
+    }
+
+    .logo h1 {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .menu {
+        font-size: 15px;
+        display: none;
+    }
+
+    .open {
+        display: block;
+        
+    }
+
+    .searchbox input {
+        display: none;
+    }
+
+    .menu-hamburguer_ {
+        margin-right: 30px;
+        height: 1px;
+        opacity: 100%;
+    }
+
+    .box-login {
+        margin-top: 50px;
+        width: 300px ;
+        height: 450px;
+    }
+
+    .inputs {
+        gap: 20px;
+    }
+
+    .inputs input {
+        height: 40px;
+    }
+
+    .inputs button {
+        padding: 10px;
+    }
+
+    .icons,.title {
+        display: none;
+    }
+
+    .icons-resp {
+        position: relative;
+        top:20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .icons-resp img {
+        height: 20px;
+    }
+
+    .title-resp {
+        display: inline;
+    }
+}
+
+@media screen and (max-width:630px) {
+    header {
+        justify-content: space-around;
+        gap: 20px;
+        height: 9vh;
+    }
+
+    .logo h1 {
+        display: none;
+    }
+
+    .menu li {
+        font-size: 12px;
+    }
+
+    .searchbox input {
+        display: none;
+    }
+
+    .menu-hamburguer_ {
+        height: 1px;
+        margin-right: 30px;
+        opacity: 100%;
+    }
+
+    .box-login {
+        margin-top: 50px;
+        width: 350px ;
+        height: 450px;
+    }
+
+    .inputs {
+        gap: 20px;
+    }
+
+    input {
+        padding: 5px 5px;
+    }
+
+    .btn__login {
+        padding: 5px 5px;
+    }
+
+    .title-resp{
+        font-size: 26px;
+    }
+
+    .icons,.title {
+        display: none;
+    }
+
+    .icons-resp {
+        position: relative;
+        top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .icons-resp img {
+        height: 16px;
+    }
+
+    .title-resp {
+        display: inline;
+    }
+}
+
+@media screen and (max-width:465px){
+    header {
+        width: 100%;
+        justify-content: space-around;
+        gap: 20px;
+        height: 9vh;
+    }
+
+    .logo h1 {
+        display: none;
+    }
+
+    .menu li {
+        font-size: 12px;
+    }
+
+    .searchbox input {
+        display: none;
+    }
+
+    .menu-hamburguer_ {
+        height: 1px;
+        margin-right: 30px;
+        opacity: 100%;
+    }
+
+    .box-login {
+        margin-top: 50px;
+        width: 350px ;
+        height: 450px;
+    }
+
+    .inputs {
+        gap: 20px;
+    }
+
+    input {
+        padding: 5px 5px;
+    }
+    
+    .btn__login {
+        padding: 5px 5px;
+    }
+
+    .title-resp{
+        font-size: 26px;
+    }
+
+    .icons,.title {
+        display: none;
+    }
+
+    .icons-resp {
+        position: relative;
+        top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .icons-resp img {
+        height: 16px;
+    }
+
+    .title-resp {
+        display: inline;
+    }
+}
